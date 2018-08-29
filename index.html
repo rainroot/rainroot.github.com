@@ -9,10 +9,10 @@ function redirectHttpToHttps() {
 	//if(window.locaion.hostname == "rainroot.org"()dd
 
 	//alert(window.location.hostname);
-
+	var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
 	var httpURL= window.location.hostname + window.location.pathname + window.location.search;
 	//var httpsURL= "https://rainroot.github.io" + httpURL;
-	var httpsURL= "https://rainroot.github.io/main_index.html";
+	var httpsURL= "https://rainroot.github.io/main_index.html?timeStampInMs";
 	window.location.href = httpsURL;
 }
 
